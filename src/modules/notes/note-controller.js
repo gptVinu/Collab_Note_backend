@@ -111,7 +111,7 @@ exports.shareNote = async (req, res) => {
     res.json({
         message: "Shareable link created",
         publicToken: note.publicToken,
-        link: `http://localhost:3000/public/${note.publicToken}`,
+        link: `https://collab-note-phi.vercel.app/public/${note.publicToken}`,
     });
 };
 
