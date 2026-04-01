@@ -15,7 +15,8 @@ exports.initSocket = (server) => {
         });
 
         socket.on("edit_note", ({ noteId, content }) => {
-            socket.to(noteId).emit("recieve_changes", content);
+            // socket.to(noteId).emit("recieve_changes", content);
+            io.to(noteId).emit("receive_changes", content);
         });
 
         socket.on("disconnect", () => {
